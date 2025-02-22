@@ -7,11 +7,11 @@ export default function HeroSection() {
             </p>
             <div className="platform-link-btns">
                 <div className="github">
-                    <span>Github</span>
+                    <a href="https://github.com/MatamaPeter">Github</a>
                     <i className="material-icons" >arrow_outward</i>
                 </div>
                 <div className="vercel">
-                    <span>Vercel</span>
+                    <a href="https://vercel.com/matamapeters-projects">Vercel</a>
                     <i className="material-icons" >arrow_outward</i>
                 </div>
             </div>
