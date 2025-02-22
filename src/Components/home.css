@@ -1,0 +1,33 @@
+
+.hero-container{
+    margin-block-start: -20px;
+    text-align: left;
+    width:70%;
+    padding: 1.3rem;
+}
+.hero-container h1{
+    font-weight: 500;
+    color: var(--lighter-font);
+}
+.platform-link-btns{
+    display: flex;
+    gap: 1em
+}
+.github, .vercel{
+    display: flex;
+    background-color: var(--hover-color);
+    padding: 3px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    place-items: center;
+}
+.github i,.vercel i{
+    font-size: 14px;
+    font-weight: 200px;
+    color: rgb(134, 134, 134);
+}
+@media screen and (max-width: 768px) {
+    .hero-container {
+            width: 90vw;
+    }
+}

@@ -5,9 +5,10 @@
   
 
  
-  --font-color: rgba(255, 255, 255, 0.87);
+  --font-color: rgba(214, 214, 214, 0.87);
   --bg-color: #0c0c0c;
   --hover-color: #242424;
+  --lighter-font: #fff;
   
 
   font-synthesis: none;
@@ -21,6 +22,7 @@
   --hover-color:rgba(0, 0, 0, 0.068);
   --font-color: #0c0c0c;
   --bg-color: #fff;
+  --lighter-font: #242424;
 }
 
 body {
