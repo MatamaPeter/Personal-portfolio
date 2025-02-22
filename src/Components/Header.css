@@ -1,0 +1,23 @@
+.header-container{
+    width: 720px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+}
+.header-container .logo{
+    height: 30px;
+}
+.nav-bar ul{
+    list-style: none;
+    display: flex;
+    gap:.5rem;
+    font-size: 14px;
+}
+.nav-bar ul li{
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+.nav-bar ul .active{
+    background-color: #242424;
+    font-weight: 600;
+}
