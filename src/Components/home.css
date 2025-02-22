@@ -1,21 +1,20 @@
 
 .home-container{
+    margin: auto;
     display: flex;
     text-align: left;
-    width: 70%;
     padding: 1.3rem;
+    place-items: center;
     flex-direction: column;
     gap: 2em;
 }
 /* Hero Section */
-.hero-container{
-    margin-block-start: -20px;
-    
-}
+
 .hero-container h1{
     font-weight: 500;
     color: var(--lighter-font);
 }
+
 .platform-link-btns{
     display: flex;
     gap: 1em
@@ -45,16 +44,14 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
-.portfolio-container h1{
+.portfolio-container h1, .blog-container h1{
     color: var(--lighter-font);
     font-weight: 450;
-    font-size: 20px;
+    font-size:18px;
 }
 .proj-container{
-    height: 250px;
-    width:320px;
-    height:150px;
-    margin-block-end: 120px;
+    max-width: 700px;
+ 
 }
 .proj-container a{
     display: flex;
@@ -65,28 +62,94 @@
     display: block;
     background-color: var(--hover-color);
     border-radius: 8px;
-    padding: 0px;
     overflow: hidden;
     width: 100%;
-    height: 180px;
 }
 
 .proj-img img {
     display: block;
     border-radius: 8px;
-    max-width: 100%;
     width: 100%;
-    height: auto;
     object-fit: cover;
 }
 .proj-title{
-    font-weight: 500px;
+    font-weight: 650;
     color: var(--lighter-font);
 }
 
 
+/* Blog Section */
+.blog-container h1{
+    display: flex;
+    place-items: center;
+    gap:.4em;
+}
+.blog-container span{
+    font-size: 15px;
+}
+.blog-dtls{
+    display: flex;
+    place-items: center;
+    width: 100%;
+}
+.blog-section-desc{
+    margin-top:30px ;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    gap: 20px;
+}
+.blog-container h1 i{
+    font-size: 18px;
+    font-weight: 100px;
+    color: rgb(134, 134, 134);
+}
+
+.blog-container .post-desc{
+    color: var(--lighter-font);
+    font-weight: 700;
+}
+
+.blog-img {
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 40%;
+    height: 90px;
+    display: none;
+}
+
+.blog-img img {
+    display: block;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 @media screen and (max-width: 768px) {
-    .hero-container {
+    .home-container {
             width: 90vw;
+    }  
+
+    
+}
+    
+@media screen and (max-width: 380px) {
+    .portfolio-elements {
+            grid-template-columns: 1fr;
     }
+    .blog-section-desc {
+        gap: .5em;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .blog-img{
+        display: flex;
+    }
+
 }
