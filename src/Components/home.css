@@ -1,9 +1,16 @@
 
+.home-container{
+    display: flex;
+    text-align: left;
+    width: 70%;
+    padding: 1.3rem;
+    flex-direction: column;
+    gap: 2em;
+}
+/* Hero Section */
 .hero-container{
     margin-block-start: -20px;
-    text-align: left;
-    width:70%;
-    padding: 1.3rem;
+    
 }
 .hero-container h1{
     font-weight: 500;
@@ -21,11 +28,63 @@
     cursor: pointer;
     place-items: center;
 }
+.github a,
+.vercel a{
+    color: var(--lighter-font);
+    font-weight: 500;
+}
 .github i,.vercel i{
     font-size: 14px;
     font-weight: 200px;
     color: rgb(134, 134, 134);
 }
+
+/* Portfolio */
+.portfolio-elements{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.portfolio-container h1{
+    color: var(--lighter-font);
+    font-weight: 450;
+    font-size: 20px;
+}
+.proj-container{
+    height: 250px;
+    width:320px;
+    height:150px;
+    margin-block-end: 120px;
+}
+.proj-container a{
+    display: flex;
+    flex-direction: column;
+    gap:.5rem;
+}
+.proj-img {
+    display: block;
+    background-color: var(--hover-color);
+    border-radius: 8px;
+    padding: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: 180px;
+}
+
+.proj-img img {
+    display: block;
+    border-radius: 8px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.proj-title{
+    font-weight: 500px;
+    color: var(--lighter-font);
+}
+
+
 @media screen and (max-width: 768px) {
     .hero-container {
             width: 90vw;
