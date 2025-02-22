@@ -1,14 +1,13 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: 'Geist', sans-serif;  line-height: 1.5;
   font-weight: 400;
   
 
  
-  --font-color: rgba(214, 214, 214, 0.87);
+  --font-color: #7b7b7b;
   --bg-color: #0c0c0c;
   --hover-color: #242424;
-  --lighter-font: #fff;
+  --lighter-font: #c9c9c9;
   
 
   font-synthesis: none;
@@ -20,7 +19,7 @@
 .light-theme {
   transition: 0.7s ease-in-out;
   --hover-color:rgba(0, 0, 0, 0.068);
-  --font-color: #0c0c0c;
+  --font-color: #5a5a5a;
   --bg-color: #fff;
   --lighter-font: #242424;
 }
