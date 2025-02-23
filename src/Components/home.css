@@ -44,8 +44,8 @@
 /* Portfolio */
 .portfolio-elements{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
 }
 .portfolio-container h1, .blog-container h1{
     color: var(--lighter-font);
