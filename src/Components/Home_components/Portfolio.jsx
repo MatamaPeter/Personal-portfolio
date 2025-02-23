@@ -1,17 +1,21 @@
-function Portfolio() {
+/*eslint-disable react/prop-types*/
+function Portfolio(props) {
+
+
   return (
     
           <div className="proj-container">
-            <a href="#">
-                  <div className="proj-img"><img src="framework.webp" alt="proj-img" /></div>
+            <a href={props.link}>
+                  <div className="proj-img"><img src={props.image} alt={props.title} /></div>
                   <div className="title-desc">
-                    <div className="proj-title">Chefs Mate</div>
+                    <div className="proj-title">{props.title}</div>
                     <div className="proj-desc">
-                        Open source analytics dashboard built with Django with over 200k visitors.
+                       {props.description}
                     </div>
                   </div>
             </a>
-          </div>
+    </div>
+    
 
   )
 }

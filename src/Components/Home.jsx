@@ -1,9 +1,19 @@
 import HeroSection from './Home_components/Hero_Section.jsx';
 import Portfolio from './Home_components/Portfolio.jsx';
 import LatestBlogs from './Home_components/LatestBlogs.jsx';
+import projects from '../assets/portfolio.js';
 
 import './home.css'
+
 function Home() {
+    const portfolioElements = projects.map((project)=>{
+    return(
+      <Portfolio
+        key={project.id}
+        {...project}
+      />
+    )
+  })  
   return (
     <div className='home-container'>
 
@@ -13,9 +23,7 @@ function Home() {
       <div className="portfolio-container">
         <h1>Portfolio</h1>
         <div className="portfolio-elements">
-          <Portfolio />
-          <Portfolio />
-          <Portfolio />
+          {portfolioElements}
         </div>
       </div>
 
