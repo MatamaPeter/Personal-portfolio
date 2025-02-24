@@ -11,7 +11,7 @@ const projects = [
         id: "2",
         title: "Portfolio Website",
         description: "My personal portfolio built using React. Carrying most of my details",
-        image: "assets/personal-portfolio.png",
+        image: "assets/portfolio.png",
         link: "https://personal-portfolio-ruddy-mu-10.vercel.app/",
     },
     {
