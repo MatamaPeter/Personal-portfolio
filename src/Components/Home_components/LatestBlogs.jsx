@@ -27,7 +27,7 @@ function LatestBlogs() {
                   </div>
               </div>  
               <div className="blog-img">
-                  <img src="computer.webp" alt="" />
+                  <img src="assets/computer.webp" alt="" />
               </div>
         </div>
         </div>
