@@ -7,15 +7,9 @@ function Home() {
  
   return (
     <div className='home-container'>
-
-
       <HeroSection />
       <Portfolio />
       <LatestBlogs />
-
-
-      
-
     </div>
   )
 }
