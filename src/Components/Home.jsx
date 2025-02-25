@@ -1,6 +1,6 @@
 import HeroSection from './Home_components/Hero_Section.jsx';
 import Portfolio from './Home_components/Portfolio.jsx';
-import LatestBlogs from './Home_components/LatestBlogs.jsx';
+import Skills from './Home_components/Skill.jsx';
 
 import './home.css'
 function Home() {
@@ -9,7 +9,7 @@ function Home() {
     <div className='home-container'>
       <HeroSection />
       <Portfolio />
-      <LatestBlogs />
+      <Skills />
     </div>
   )
 }
