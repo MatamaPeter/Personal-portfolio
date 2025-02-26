@@ -8,6 +8,7 @@
   --bg-color: #0c0c0c;
   --hover-color: #242424;
   --lighter-font: #d4d4d4;
+  --lighter-bg: #242424;
   
 
   font-synthesis: none;
@@ -28,6 +29,7 @@
   --font-color: #5a5a5a;
   --bg-color: #fff;
   --lighter-font: #242424;
+  --lighter-bg: #5a5a5a;
 }
 
 body {

@@ -6,6 +6,7 @@
     place-items: center;
     flex-direction: column;
     gap: 2em;
+    width: 700px;
 }
 
 /* Hero Section */
@@ -59,7 +60,8 @@
 
 .portfolio-container h1,
 .blog-container h1,
-.skill-container h1 {
+.skill-container h1,
+.contact-container h1 {
     color: var(--lighter-font);
     font-weight: 450;
     font-size: 18px;
@@ -113,7 +115,8 @@
     width: 100%;
 }
 
-.skill-container p {
+.skill-container p,
+.contact-container p {
     width: 60%;
 }
 
@@ -145,11 +148,151 @@
     font-size: 12px;
 }
 
+/* Contact form */
+.contact-container{
+    display: block;
+    flex-direction: column;
+    justify-content: left;
+    margin: auto;
+    width: 100%;
+
+}
+.contact-info{
+    display: flex;
+    gap: 1rem;
+    width: 100%;}
+.email ,
+.phone {
+    display: flex;
+    gap: .5em;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+        width: 97%;
+        margin-right: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.name-email-field{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: none;
+    width: 100%;
+    display: flex;
+    padding: 15px 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    background: var(--hover-color);
+    color: var(--font-color);
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    opacity: 0.3;
+}
+
+
+.contact-form textarea {
+    min-height: 100px;
+}
+
+.btn-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-submit button {
+    transition: all 0.3s ease-in-out;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--hover-color);
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    min-width: 120px;
+}
+.sent-text{
+    display: flex;
+    place-items: center;
+    gap: 0.3em;
+}
+
+.btn-submit button:disabled {
+    cursor: not-allowed;
+}
+
+.loader {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 3px solid white;
+    animation: spin 1s linear infinite;
+}
+
+.checkmark {
+    font-size: 18px;
+    animation: fadeIn 0.3s ease-in-out;
+    color: #4CAF50;
+    border-radius: 50%;
+    background: #636363;
+    width: 30px;
+    height: 30px;
+    
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.btn-submit button:hover {
+    transition:  .3s ease;
+    transform: scale(1.1);
+}
+
+
+
 
 @media screen and (max-width: 768px) {
-    .home-container {
+    .home-container
+{
             width: 90vw;
     }  
+
         .hero-container p {
             width: 100%;
         }
@@ -157,9 +300,34 @@
  .skill-items {
      grid-template-columns: 1fr;
  }
- .skill-container p {
+ .skill-container p,
+ .contact-container p {
      width: 70%;
  }
+ .name-email-field{
+    grid-template-columns: repeat(1,1fr);
+    gap: 1em;
+ }
+ .btn-submit{
+    display: flex;
+    justify-content: center;
+
+ }
+
+ .btn-submit button{
+    width: 50%;
+    border-radius: 15px;
+ }
+    
+}
+
+@media screen and (max-width: 466px){
+    .contact-info{
+        flex-direction: column;
+    }
+    .contact-container p{
+        width: 100%;
+    }
     
 }
     
@@ -167,7 +335,8 @@
     .portfolio-elements{
             grid-template-columns: 1fr;
     }
-         .skill-container p {
+         .skill-container p,
+                 .contact-container p {
              width: 100%;
          }
 
