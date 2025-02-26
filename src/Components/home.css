@@ -217,7 +217,7 @@
     padding: 12px 24px;
     border: none;
     border-radius: 30px;
-    background-color: var(--hover-color);
+    background-color: var(--lighter-bg);
     cursor: pointer;
     font-size: 16px;
     color: white;

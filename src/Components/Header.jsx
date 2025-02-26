@@ -1,50 +1,52 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from "react-router-dom";
 import './Header.css';
+
 function Header() {
-
-    // Global Variables
-    const tabs = ["Home", "About", "Plans", "Blogs"]
+    const tabs = ["Home", "About", "Plans", "Blogs"];
     
-    // States
-    const [isActive, setIsActive] = useState("Home");
-    const [darkMode, setDarkMode] = useState(true);
+    // Get current location for active tab highlighting
+    const location = useLocation();
 
+    // Extract pathname and convert it to a proper format for active state
+    const currentTab = location.pathname === "/" ? "Home" : location.pathname.substring(1).charAt(0).toUpperCase() + location.pathname.substring(2);
 
-    //Callback functions    
-   const tabsElement = tabs.map((tab, index) => {
-            return(
-                <li
-                    key={index}
-                    className={isActive===tab ? "active": ""}
-                    onClick={() => setIsActive(tab)}
-                >
-                <a href="#">{tab}</a></li>
-            )
-    })
+    const [darkMode, setDarkMode] = useState(() => {
+        return localStorage.getItem('theme') === "true";
+    });
+
+    useEffect(() => {
+        document.body.classList.toggle("light-theme", !darkMode);
+    }, [darkMode]);
 
     function toggleDarkMode() {
-        setDarkMode(!darkMode);
-        document.body.classList.toggle("light-theme");
+        const newMode = !darkMode;
+        setDarkMode(newMode);
+        localStorage.setItem("theme", newMode);
+        document.body.classList.toggle("light-theme", !newMode);
     }
-    
-    
-    
-    
 
-  return (
-      <>
-          <div className="header-container">
-              <img src={darkMode ? "my_portfolio_logo_light.svg" : "my_portfolio_logo_dark.svg"} alt="My-logo" className="logo" />
-              <div className='nav-bar'>
-                  <ul>
-                      {tabsElement}
-                  </ul>
-              </div>
-              <i className="material-icons" onClick={toggleDarkMode}>{darkMode?"dark_mode":"light_mode"}</i>
-
-          </div>
-      </>
-  )
+    return (
+        <div className="header-container">
+            <img 
+                src={darkMode ? "my_portfolio_logo_light.svg" : "my_portfolio_logo_dark.svg"} 
+                alt="My-logo" 
+                className="logo" 
+            />
+            <div className='nav-bar'>
+                <ul>
+                    {tabs.map((tab, index) => (
+                        <li key={index} className={currentTab === tab ? "active" : ""}>
+                            <Link to={tab === "Home" ? "/" : `/${tab.toLowerCase()}`}>{tab}</Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <i className="material-icons" onClick={toggleDarkMode}>
+                {darkMode ? "dark_mode" : "light_mode"}
+            </i>
+        </div>
+    );
 }
 
-export default Header
+export default Header;

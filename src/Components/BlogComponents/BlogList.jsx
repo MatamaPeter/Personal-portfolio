@@ -44,24 +44,25 @@ function BlogList() {
 
   return (
     <div className="blog-container">
-      <h1>Latest Blogs with Pictures</h1>
+      <h1>Tech Blogs</h1>
+      <p>Latest tech-based blogs.Stay tuned!</p>
       
       {loading ? (
         <p>Loading...</p>
       ) : (
         <div className="blog-section">
-          {blogs.map((blog) => (
-            <div key={blog.id} className="blog-card">
+          {blogs.map((blog,index) => (
+            <div key={index} className="blog-card">
               {blog.cover_image && (
                 <img src={blog.cover_image} alt={blog.title} className="blog-image" />
               )}
               <h2>
-                <Link to={`/blog/${blog.id}`}>{blog.title}</Link>  {/* Link to blog detail */}
+                <Link to={`/blogs/${blog.id}`}>{blog.title}</Link>  {/* Link to blog detail */}
               </h2>
               <p>{blog.description ? blog.description : blog.body.substring(0, 100)}...</p>
               <p><strong>By:</strong> {blog.user.username}</p>
               <p><strong>Published:</strong> {new Date(blog.published_at).toLocaleDateString()}</p>
-              <hr />
+            
             </div>
           ))}
         </div>

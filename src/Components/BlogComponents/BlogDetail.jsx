@@ -6,6 +6,7 @@ function BlogDetail() {
   const [loading, setLoading] = useState(true);  // To handle loading state
   const { id } = useParams();  // Get the blog ID from the URL
 
+
   // Fetch full details of the blog by ID
   async function fetchBlogDetails(id) {
     try {

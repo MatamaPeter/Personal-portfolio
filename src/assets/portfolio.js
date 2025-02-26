@@ -3,14 +3,14 @@ const projects = [
     {
         id: "1",
         title: "Chef's Mate",
-        description: "Open source analytics dashboard built with Django with over 200k visitors.",
+        description: "An AI-based recipe generator created with Hugging-face(Mistral AI) API.",
         image: "assets/chef-mate.png", 
         link: "https://chef-s-mate.vercel.app/",
     },
     {
         id: "2",
         title: "Portfolio Website",
-        description: "My personal portfolio built using React. Carrying most of my details",
+        description: "My personal portfolio built using React. Carrying most of my details.",
         image: "assets/portfolio.png",
         link: "https://personal-portfolio-ruddy-mu-10.vercel.app/",
     },
