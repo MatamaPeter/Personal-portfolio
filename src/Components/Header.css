@@ -16,6 +16,7 @@ html {
     justify-content: space-between;
     padding: 10px 20px;
     box-sizing: border-box;
+    width: 700px;
 }
 
 .header-container .logo {
