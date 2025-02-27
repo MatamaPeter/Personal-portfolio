@@ -1,7 +1,8 @@
+import FuturePlans from "./FuturePlans"
 function Plans() {
   return (
     <div>
-      Plans
+      <FuturePlans />
     </div>
   )
 }

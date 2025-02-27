@@ -1,0 +1,14 @@
+.about-container{
+    margin: auto;
+    display: flex;
+    text-align: left !important;
+    padding: 1.3rem;
+    flex-direction: column;
+    max-width: 700px;
+}
+.about-container h1{
+    margin-bottom: -20px;
+    color: var(--lighter-font);
+
+}
+

@@ -6,7 +6,6 @@
     place-items: center;
     flex-direction: column;
     gap: 2em;
-    width: 700px;
 }
 
 /* Hero Section */
@@ -331,7 +330,7 @@
     
 }
     
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 450px) {
     .portfolio-elements{
             grid-template-columns: 1fr;
     }

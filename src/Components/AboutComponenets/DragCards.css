@@ -1,0 +1,152 @@
+.container {
+    display: flex;
+    justify-content: center;
+    min-height: 280px;
+    position: relative;
+    perspective: 1000px;
+    padding: 30px 0;
+}
+
+.card {
+    width: 180px;
+    height: 240px;
+    cursor: pointer;
+    perspective: 1000px;
+    transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    z-index: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    margin: 0 -60px;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-front {
+    background: #fff;
+    z-index: 2;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+    border-radius: 16px;
+}
+
+.card-back {
+    background: var(--hover-color);
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    transform: rotateY(180deg);
+}
+
+.card-back p {
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 15px;
+
+}
+
+.card-front::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0) 20%,
+            rgba(255, 255, 255, 0.1) 50%,
+            rgba(255, 255, 255, 0) 80%);
+    transform: rotate(30deg);
+    z-index: 2;
+    pointer-events: none;
+    animation: shine 6s infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) rotate(30deg);
+    }
+
+    100% {
+        transform: translateX(100%) rotate(30deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        perspective: none;
+        padding: 0;
+    }
+    
+    .card {
+        transform: rotate(12deg)!important;
+        cursor: default;
+        margin-top: 20px;
+        width: 50vw;
+    }
+    
+    .card-inner {
+        transition: none !important;
+    }
+    
+    .card-front::after {
+        animation: none;
+        display: none;
+    }
+    
+    .card-back {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card {
+        width: 200px;
+        height: 260px;
+    }
+
+    .card-back p {
+        padding: 20px;
+        font-size: 1.1rem;
+    }
+}
