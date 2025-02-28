@@ -11,8 +11,9 @@ function Header() {
     // Extract pathname and convert it to a proper format for active state
     const currentTab = location.pathname === "/" ? "Home" : location.pathname.substring(1).charAt(0).toUpperCase() + location.pathname.substring(2);
 
+    // Set darkMode to true by default, but allow it to be overwritten by localStorage if available
     const [darkMode, setDarkMode] = useState(() => {
-        return localStorage.getItem('theme') === "false";
+        return localStorage.getItem('theme') === "false" ? false : true; // darkMode will be true unless localStorage has "false"
     });
 
     useEffect(() => {
