@@ -14,6 +14,10 @@ export default function HeroSection() {
                     <a href="https://vercel.com/matamapeters-projects">Vercel</a>
                     <i className="material-icons" >arrow_outward</i>
                 </div>
+                <div className="resume-download">
+                    <a href="resume.pdf">Resume</a>
+                    <i className="material-icons" >arrow_downward</i>
+                </div>
             </div>
         </div>
     )

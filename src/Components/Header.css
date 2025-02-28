@@ -55,13 +55,13 @@ html {
         padding: 15px;
     }
 .header-container ul {
-    gap: 0;
+    gap: .7rem;
 }
 .header-container ul li {
     padding: 5px 8px ;
     margin: 0;
 }
-    .header-container .logo {
+    .header-container .logo-link {
         display: none;
     }
 

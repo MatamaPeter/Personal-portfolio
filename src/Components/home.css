@@ -28,7 +28,8 @@
 }
 
 .github,
-.vercel {
+.vercel,
+.resume-download {
     display: flex;
     background-color: var(--hover-color);
     padding: 3px 15px;
@@ -36,18 +37,29 @@
     cursor: pointer;
     place-items: center;
 }
-
+.resume-download{
+    gap: .6rem;
+}
 .github a,
-.vercel a {
+.vercel a,
+.resume-download a {
     color: var(--lighter-font);
     font-weight: 400;
 }
 
 .github i,
-.vercel i {
+.vercel i{
     font-size: 14px;
     font-weight: 200px;
     color: rgb(134, 134, 134);
+}
+.resume-download i {
+    font-size: 16px;
+    background: var(--bg-color);
+    padding: 1px;
+    font-weight: 700px;
+    border-radius: 50%;
+
 }
 
 /* Portfolio */

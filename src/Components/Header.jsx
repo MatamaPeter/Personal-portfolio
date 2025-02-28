@@ -46,7 +46,7 @@ function Header() {
 
     return (
         <div className="header-container">
-            <Link to="Home">
+            <Link to="Home" className='logo-link'>
                 <img 
                     src={darkMode ? "my_portfolio_logo_light.svg" : "my_portfolio_logo_dark.svg"} 
                     alt="My-logo" 
