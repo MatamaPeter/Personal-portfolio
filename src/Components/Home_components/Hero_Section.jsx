@@ -1,7 +1,6 @@
 export default function HeroSection() {
     return (
         <div className="hero-container">
-            
             <h1>Hello, Matama here!</h1>
             
             <p>
