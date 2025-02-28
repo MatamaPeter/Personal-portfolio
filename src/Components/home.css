@@ -24,10 +24,9 @@
 .availability-status{
     display: flex;
     place-items: center;
-    margin-bottom: -25px;
+    margin-top: 10px;
     font-size: 12px;
     gap: .3rem;
-    color: var(--lighter-font);
 }
 .availability-status i{
     font-size: 14px;
