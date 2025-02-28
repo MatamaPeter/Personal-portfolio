@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.petermatama.co.ke/sitemap.xml

@@ -7,16 +7,20 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-sitemap": "node generateSitemap.js"
   },
   "dependencies": {
     "@vercel/speed-insights": "^1.2.0",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^12.4.7",
+    "fs": "^0.0.1-security",
     "motion": "^12.4.7",
+    "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.2.0",
+    "sitemap": "^8.0.0",
     "tailwind-merge": "^3.0.2"
   },
   "devDependencies": {
