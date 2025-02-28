@@ -22,7 +22,7 @@
     width: 80%;
 }
 .availability-status{
-    display: flex;
+    display: none;
     place-items: center;
     margin-top: 10px;
     font-size: 12px;
