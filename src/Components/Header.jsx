@@ -12,7 +12,7 @@ function Header() {
     const currentTab = location.pathname === "/" ? "Home" : location.pathname.substring(1).charAt(0).toUpperCase() + location.pathname.substring(2);
 
     const [darkMode, setDarkMode] = useState(() => {
-        return localStorage.getItem('theme') === "true";
+        return localStorage.getItem('theme') === "false";
     });
 
     useEffect(() => {
