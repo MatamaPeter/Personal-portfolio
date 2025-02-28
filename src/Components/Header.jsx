@@ -4,37 +4,56 @@ import './Header.css';
 
 function Header() {
     const tabs = ["Home", "About", "Plans", "Blogs"];
-    
-    // Get current location for active tab highlighting
     const location = useLocation();
 
-    // Extract pathname and convert it to a proper format for active state
-    const currentTab = location.pathname === "/" ? "Home" : location.pathname.substring(1).charAt(0).toUpperCase() + location.pathname.substring(2);
+    // Format tab name from path
+    const formatTabName = (path) => {
+        if (path === "/") return "Home";
+        return path
+            .substring(1)
+            .replace(/-/g, " ")
+            .replace(/\b\w/g, (char) => char.toUpperCase());
+    };
 
-    // Set darkMode to true by default, but allow it to be overwritten by localStorage if available
+    const currentTab = formatTabName(location.pathname);
+
+    // Initialize darkMode state
     const [darkMode, setDarkMode] = useState(() => {
-        return localStorage.getItem('theme') === "false" ? false : true; // darkMode will be true unless localStorage has "false"
+        try {
+            return localStorage.getItem('theme') === "false" ? false : true;
+        } catch (error) {
+            console.error("Could not access localStorage:", error);
+            return true; // Default to dark mode
+        }
     });
 
+    // Apply theme to body
     useEffect(() => {
         document.body.classList.toggle("light-theme", !darkMode);
     }, [darkMode]);
 
+    // Toggle dark mode
     function toggleDarkMode() {
         const newMode = !darkMode;
         setDarkMode(newMode);
-        localStorage.setItem("theme", newMode);
+        try {
+            localStorage.setItem("theme", newMode);
+        } catch (error) {
+            console.error("Could not update localStorage:", error);
+        }
         document.body.classList.toggle("light-theme", !newMode);
     }
 
     return (
         <div className="header-container">
-            <img 
-                src={darkMode ? "my_portfolio_logo_light.svg" : "my_portfolio_logo_dark.svg"} 
-                alt="My-logo" 
-                className="logo" 
-                loading="lazy"
-            />
+            <Link to="Home">
+                <img 
+                    src={darkMode ? "my_portfolio_logo_light.svg" : "my_portfolio_logo_dark.svg"} 
+                    alt="My-logo" 
+                    className="logo" 
+                    loading="lazy"
+                />
+            </Link>
             <div className='nav-bar'>
                 <ul>
                     {tabs.map((tab, index) => (
@@ -44,7 +63,11 @@ function Header() {
                     ))}
                 </ul>
             </div>
-            <i className="material-icons" onClick={toggleDarkMode}>
+            <i 
+                className="material-icons" 
+                onClick={toggleDarkMode}
+                aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+            >
                 {darkMode ? "dark_mode" : "light_mode"}
             </i>
         </div>
