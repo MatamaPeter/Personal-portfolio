@@ -21,7 +21,20 @@
     font-weight: 400;
     width: 80%;
 }
-
+.availability-status{
+    display: flex;
+    place-items: center;
+    margin-bottom: -25px;
+    font-size: 12px;
+    gap: .3rem;
+    color: var(--lighter-font);
+}
+.availability-status i{
+    font-size: 12px;
+    background: linear-gradient(to right, green, rgb(13, 255, 13));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .platform-link-btns {
     display: flex;
     gap: 1em
