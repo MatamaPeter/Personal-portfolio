@@ -9,7 +9,7 @@ function Portfolio() {
                 <div key={project.id} className="proj-container">
                     <a href={project.link} target="_blank" rel="noopener noreferrer">
                         <div className="proj-img">
-                            <img src={project.image} alt={project.title} />
+                            <img loading="lazy" src={project.image} alt={project.title} />
                         </div>
                         <div className="title-desc">
                             <div className="proj-title">{project.title}</div>

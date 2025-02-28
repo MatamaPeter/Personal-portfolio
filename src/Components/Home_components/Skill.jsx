@@ -4,7 +4,7 @@ function Skills() {
   const skillsElement = skillItem.map((skill,index) => {
     return(
     <div className="skill-item" key={index}>
-        <img src={skill.imgSrc} alt={skill.label} />
+        <img src={skill.imgSrc} loading="lazy" alt={skill.label} />
         <div className="skill-info">
           <div className="skill-label">{skill.label}</div>
           <div className="skill-desc">{ skill.desc}</div>

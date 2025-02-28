@@ -88,7 +88,7 @@ const FlipCard = ({ image, text, index }) => {
     >
       <div className={`card-inner ${isFlipped ? "flipped" : ""}`}>
         <div className="card-front">
-          <img src={image} alt="Card content" />
+          <img src={image} loading="lazy" alt="Card content"  />
         </div>
         {!isMobile && (
           <div className="card-back">

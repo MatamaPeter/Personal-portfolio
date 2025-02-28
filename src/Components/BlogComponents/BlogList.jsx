@@ -54,7 +54,7 @@ function BlogList() {
           {blogs.map((blog,index) => (
             <div key={index} className="blog-card">
               {blog.cover_image && (
-                <img src={blog.cover_image} alt={blog.title} className="blog-image" />
+                <img loading="lazy" src={blog.cover_image} alt={blog.title} className="blog-image" />
               )}
               <h2>
                 <Link to={`/blogs/${blog.id}`}>{blog.title}</Link>  {/* Link to blog detail */}

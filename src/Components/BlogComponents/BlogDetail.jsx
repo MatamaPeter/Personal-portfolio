@@ -33,7 +33,7 @@ function BlogDetail() {
           <div className="blog-detail">
             <h1>{blog.title}</h1>
             {blog.cover_image && (
-              <img src={blog.cover_image} alt={blog.title} className="blog-image" />
+              <img src={blog.cover_image} loading="lazy" alt={blog.title} className="blog-image" />
             )}
             <p><strong>By:</strong> {blog.user.username}</p>
             <p><strong>Published:</strong> {new Date(blog.published_at).toLocaleDateString()}</p>

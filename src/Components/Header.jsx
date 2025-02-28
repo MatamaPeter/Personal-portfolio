@@ -32,6 +32,7 @@ function Header() {
                 src={darkMode ? "my_portfolio_logo_light.svg" : "my_portfolio_logo_dark.svg"} 
                 alt="My-logo" 
                 className="logo" 
+                loading="lazy"
             />
             <div className='nav-bar'>
                 <ul>
