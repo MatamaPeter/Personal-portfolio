@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { motion } from "motion/react";
 import Header from "./Components/Header";
@@ -16,6 +17,7 @@ function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
+          <SpeedInsights />
           <Header /> {/* Header should be outside Routes for persistent navigation */}
           
           <Routes>
