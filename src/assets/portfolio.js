@@ -31,7 +31,7 @@ const projects = [
     {
         id: "5",
         title: "Miritec Gym and fitness",
-        description: "An online store platfrom for gyme and fitness equipment based in Kenya.",
+        description: "An online store platfrom for gym and fitness equipment based in Kenya.",
         image: "assets/miritec.png",
         link: "https://miritecgymandfitnesskenya.co.ke/",
     },
