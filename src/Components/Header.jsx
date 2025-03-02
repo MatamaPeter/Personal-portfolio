@@ -9,6 +9,7 @@ function Header() {
     // Format tab name from path
     const formatTabName = (path) => {
         if (path === "/") return "Home";
+        if (path.startsWith("/blogs")) return "Blogs"; // Fix: Keep Blogs active on detail pages
         return path
             .substring(1)
             .replace(/-/g, " ")
@@ -17,13 +18,13 @@ function Header() {
 
     const currentTab = formatTabName(location.pathname);
 
-    // Initialize darkMode state
+    // Dark mode state (with localStorage)
     const [darkMode, setDarkMode] = useState(() => {
         try {
-            return localStorage.getItem('theme') === "false" ? false : true;
+            return localStorage.getItem('theme') !== "light"; // Default to dark mode
         } catch (error) {
             console.error("Could not access localStorage:", error);
-            return true; // Default to dark mode
+            return true;
         }
     });
 
@@ -37,7 +38,7 @@ function Header() {
         const newMode = !darkMode;
         setDarkMode(newMode);
         try {
-            localStorage.setItem("theme", newMode);
+            localStorage.setItem("theme", newMode ? "dark" : "light");
         } catch (error) {
             console.error("Could not update localStorage:", error);
         }
@@ -46,7 +47,7 @@ function Header() {
 
     return (
         <div className="header-container">
-            <Link to="Home" className='logo-link'>
+            <Link to="/" className='logo-link'> 
                 <img 
                     src={darkMode ? "my_portfolio_logo_light.svg" : "my_portfolio_logo_dark.svg"} 
                     alt="My-logo" 
