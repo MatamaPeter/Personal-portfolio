@@ -69,6 +69,7 @@ function Contact() {
               type="text"
               name="name"
               id="name"
+              autoComplete="name"
               required
             />
           </div>
@@ -79,6 +80,7 @@ function Contact() {
               type="email"
               name="email"
               id="email"
+              autoComplete="email"
               required
             />
           </div>
