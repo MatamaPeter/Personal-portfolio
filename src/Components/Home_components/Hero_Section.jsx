@@ -9,15 +9,15 @@ export default function HeroSection() {
             </p>
             <div className="platform-link-btns">
                 <div className="github">
-                    <a href="https://github.com/MatamaPeter">Github</a>
+                    <a href="https://github.com/MatamaPeter" target="_blank" rel="noopener noreferrer">Github</a>
                     <i className="material-icons" >arrow_outward</i>
                 </div>
                 <div className="vercel">
-                    <a href="https://vercel.com/matamapeters-projects">Vercel</a>
+                    <a href="https://vercel.com/matamapeters-projects" target="_blank" rel="noopener noreferrer">Vercel</a>
                     <i className="material-icons" >arrow_outward</i>
                 </div>
                 <div className="resume-download">
-                    <a href="resume.pdf">Resume</a>
+                    <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
                     <i className="material-icons" >arrow_downward</i>
                 </div>
             </div>
