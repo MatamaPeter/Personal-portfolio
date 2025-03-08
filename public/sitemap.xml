@@ -1,1 +1,53 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"><url><loc>https://www.petermatama.co.ke/</loc><changefreq>daily</changefreq><priority>1.0</priority></url><url><loc>https://www.petermatama.co.ke/about</loc><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>https://www.petermatama.co.ke/projects</loc><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>https://www.petermatama.co.ke/contact</loc><changefreq>monthly</changefreq><priority>0.5</priority></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" 
+  xmlns:xhtml="http://www.w3.org/1999/xhtml" 
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <!-- Home Page -->
+  <url>
+    <loc>https://www.petermatama.co.ke/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.petermatama.co.ke/logo.png</image:loc>
+      <image:title>Peter Matama Logo</image:title>
+    </image:image>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://www.petermatama.co.ke/about</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.petermatama.co.ke/about-image.png</image:loc>
+      <image:title>About Peter Matama</image:title>
+    </image:image>
+  </url>
+
+  <!-- Blog Page -->
+  <url>
+    <loc>https://www.petermatama.co.ke/blogs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.petermatama.co.ke/blog-thumbnail.png</image:loc>
+      <image:title>Latest Blog Posts</image:title>
+    </image:image>
+  </url>
+
+  <!-- Plans Page -->
+  <url>
+    <loc>https://www.petermatama.co.ke/plans</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>https://www.petermatama.co.ke/plans-image.png</image:loc>
+      <image:title>Plans and Pricing</image:title>
+    </image:image>
+  </url>
+
+</urlset>
