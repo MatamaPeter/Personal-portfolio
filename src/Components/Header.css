@@ -20,7 +20,7 @@ html {
 }
 
 .header-container .logo {
-    height: 30px;
+    height: 25px;
 }
 
 .nav-bar ul {
@@ -44,10 +44,14 @@ html {
 
 .nav-bar ul li a {
     transition: 0.3s ease-in-out;
-    padding: 8px 15px;
+    padding: 4px 13px;
     cursor: pointer;
     color: var(--font-color);
     text-decoration: none;
+}
+
+.header-container i{
+    color: var(--lighter-font);
 }
 
 @media screen and (max-width: 768px) {
