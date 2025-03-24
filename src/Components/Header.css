@@ -52,6 +52,9 @@ html {
 
 .header-container i{
     color: var(--lighter-font);
+    font-weight: 100;
+    font-size: 20px;
+    
 }
 
 @media screen and (max-width: 768px) {
