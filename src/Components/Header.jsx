@@ -69,7 +69,7 @@ function Header() {
                 onClick={toggleDarkMode}
                 aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
             >
-                {darkMode ? "dark_mode" : "light_mode"}
+                {darkMode ? "light_mode" : "dark_mode"}
             </i>
         </div>
     );
