@@ -3,13 +3,20 @@ const EducationTimeline = () => {
   const educationData = [
     {
       id: 1,
+      years: "March 2025",
+      degree: "Cybersecurity and Emerging Technologies Awareness Training",
+      institution: "ICT Authority, Kenya",
+      description: "A comprehensive training on cybersecurity and emerging technologies."
+    },
+    {
+      id: 2,
       years: "2020 - 2024",
       degree: "Bachelor of Science in Software Engineering",
       institution: "Kirinyaga University",
       description: "Specialized in full-stack development with a focus on modern web technologies and design principles."
     },
     {
-      id: 2,
+      id: 3,
       years: "2018 (Nov-Dec)",
       degree: "Basics in web design and development",
       institution: "Zalego Academy",
