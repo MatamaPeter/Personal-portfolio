@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import './Header.css';
 
 function Header() {
-    const tabs = ["Home", "About", "Plans", "Blogs"];
+    const tabs = ["Home", "About", "Goals", "Blogs"];
     const location = useLocation();
 
     // Format tab name from path
