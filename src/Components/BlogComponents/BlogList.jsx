@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
+import "./BlogList.css";
 
 function BlogList() {
   const [blogs, setBlogs] = useState([]);
@@ -74,7 +75,11 @@ function BlogList() {
       <h1>Tech Blogs</h1>
       <p>Latest tech-based blogs. Stay tuned!</p>
 
-      {loading && <p>Loading...</p>}
+      {loading && (
+        <div className="spinner-container">
+          <div className="spinner"></div>
+        </div>
+      )}
       {error && <p className="error-message">{error}</p>}
       {!loading && !error && blogs.length === 0 && <p>No blogs found. Check back later!</p>}
       {!loading && !error && <section className="blog-section">{blogList}</section>}
