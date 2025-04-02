@@ -9,7 +9,7 @@ const futurePlans = [
   },
   {
     title: "Travel & Exploration",
-    description: "Exploring different parts of the world, immersing myself in diverse cultures, and capturing beautiful landscapes.",
+    description: "ExploriGoalsng different parts of the world, immersing myself in diverse cultures, and capturing beautiful landscapes.",
     icon: "🌍"
   },
   {

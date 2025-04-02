@@ -1,5 +1,5 @@
 import FuturePlans from "./FuturePlans"
-function Plans() {
+function Goals() {
   return (
     <div>
       <FuturePlans />
@@ -7,4 +7,4 @@ function Plans() {
   )
 }
 
-export default Plans
+export default Goals

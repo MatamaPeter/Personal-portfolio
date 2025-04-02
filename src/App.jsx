@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import About from "./Components/About";
-import Plans from "./Components/Plans";
+import Goals from "./Components/Goals";
 import Blogs from "./Components/Blogs";
 import "./App.css";
 
@@ -25,7 +25,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/plans" element={<Plans />} />
+            <Route path="/goals" element={<Goals />} />
             <Route path="/blogs/*" element={<Blogs />} />
             {/* Fallback route */}
             <Route path="*" element={<Home />} />
