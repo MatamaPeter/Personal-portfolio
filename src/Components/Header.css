@@ -29,17 +29,23 @@ html {
     gap: 0.8rem;
     font-size: 14px;
     padding: 0;
+    position: relative;
 }
 
 .nav-bar ul li {
     display: flex;
     border-radius: 8px;
-    
+    position: relative;
+    z-index: 1;
 }
 
-.nav-bar ul .active {
+.nav-bar ul .active-indicator {
+    position: absolute;
     background-color: var(--hover-color);
-    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    z-index: 0;
+    height: 100%;
 }
 
 .nav-bar ul li a {
@@ -48,6 +54,12 @@ html {
     cursor: pointer;
     color: var(--font-color);
     text-decoration: none;
+    position: relative;
+    z-index: 2;
+}
+
+.nav-bar ul li.active a {
+    font-weight: 600;
 }
 
 .header-container i{
