@@ -3,7 +3,7 @@ const projects = [
     {
         id: "1",
         title: "Chef's Mate",
-        description: "An AI-based recipe generator created with Hugging-face(Mistral AI) API.",
+        description: "An AI-powered recipe generator to suggest recipes based on your own ingredients",
         image: "assets/chef-mate.png", 
         link: "https://chef-s-mate.vercel.app/",
     },
